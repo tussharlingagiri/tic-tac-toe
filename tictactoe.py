@@ -2,31 +2,32 @@
 board = [[" " for _ in range(3)] for _ in range(3)]
 
 def draw_board():
-    #  board is list of lists
+    #  board is a list of lists
     # i is counter and row is the value in the board
     for i, row in enumerate(board):
-        # prints two index and row values
+        # prints index value and row values
         print(f'Row {i}: {row}')
 def get_move(player):
-    # run a loop to check various conditions to move the player either X or Y into
-    # an available position. There is no precondition required for this loop
-    # hence use a while true, infinite loop and break the infinite loop with return
+    # Run a loop and check various conditions to move the player either X or Y into an available position.
+    # There is no pre-condition required before starting  this loop 
+    # Hence use a "while True" infinite loop and break the infinite loop with return
     while True:
-        move = input(f'{player}, enter your move (row column): ')  # read user input into move
-        print("inside get move function, after move ...player is : ", player)
+        # read user input into move
+        move = input(f'{player}, enter your move (row column): ')  
         if len(move) != 2:
             print('Invalid move, try again')
-            continue  # continue the program and don't exit from the program if the condition not met
+            # continue the program and don't exit from the program if the condition not met
+            continue  
         row, col = move
         if not row.isdigit() or not col.isdigit():
-            print('Invalid move, try again')
+            print('isdigit validation encountered ... try again')
             continue
         # user might have entered row and column together as 11 or 12 or 21 etc.
         # so unpack those and assign to row and column
         row, col = int(row), int(col)
 
         if row < 0 or row > 2 or col < 0 or col > 2:
-            print('Invalid move, try again')
+            print('row or col <0 or >2 encountered ... try again')
             continue
         if board[row][col] != ' ':
             print('That space is already occupied, try again')
@@ -36,7 +37,7 @@ def get_move(player):
 def check_winner():
     # check rows
     for row in board:
-        print("inside check winner, row value is : ", row)
+        print("inside check_winner, row value is : ", row)
         if row[0] != ' ' and row[0] == row[1] == row[2]:
             return row[0]
     # check columns
