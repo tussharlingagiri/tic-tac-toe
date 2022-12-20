@@ -1,3 +1,4 @@
+# 3x3 board
 board = [[" " for _ in range(3)] for _ in range(3)]
 
 def draw_board():
@@ -7,7 +8,7 @@ def draw_board():
         # prints two index and row values
         print(f'Row {i}: {row}')
 def get_move(player):
-    # run a loop to check various conditions to move the player either V or T into
+    # run a loop to check various conditions to move the player either X or Y into
     # an available position. There is no precondition required for this loop
     # hence use a while true, infinite loop and break the infinite loop with return
     while True:
