@@ -1,7 +1,7 @@
 # tic-tac-toe
-**Quick Test
-** Run the Program
-** Enter 00 10 11 21 22
+
+- Install pdf market place plugin for vscode
+- mp4 can be viewed in vscode
 
 Pending
 ************
