@@ -5,3 +5,5 @@ def evenorodd(n):
         return 'odd'
 
 print(evenorodd(6))
+ 
+  
