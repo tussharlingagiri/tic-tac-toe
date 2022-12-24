@@ -1,0 +1,33 @@
+board = [[""for _ in range(3)] for _ in range(3)]
+
+def my_board():
+    for i, row in enumerate(board):
+        print(f'Row {i}: {row}')
+
+
+def turn(player):
+    while True:
+        move = input(f'{player} enter your move :')
+        if len(move) != 2:
+            print('invalid , please enter again')
+            continue
+        row,col = move
+        if not row.isdigit() and col.isdigit():
+            print ('invalid type , try again ') 
+            continue
+        row , col = int(row) , int(col)
+        if row <0 or  row > 2 or col <0 or row > 2:
+            print('invalid position  , try again ')
+            continue 
+        if board[row][col] != " ":
+            print('space already taken' )
+            continue 
+        return row , col 
+
+def check_winner():
+
+        for row in board :
+            print()
+
+    
+    
