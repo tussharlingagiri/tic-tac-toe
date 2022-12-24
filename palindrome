@@ -1,0 +1,7 @@
+def palindrome(s):
+    s_reverse = s[::-1]
+    return s == s_reverse
+
+print(palindrome('kayak'))
+print(palindrome('space'))
+
