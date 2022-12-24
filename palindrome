@@ -4,4 +4,5 @@ def palindrome(s):
 
 print(palindrome('kayak'))
 print(palindrome('space'))
+print(palindrome('14641'))
 
